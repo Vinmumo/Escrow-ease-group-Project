@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 
 export default function Welcome(){
+
     const [cars, setCars] = useState([]);
   const [selectedCar, setSelectedCar] = useState(null);
 
@@ -57,6 +58,7 @@ export default function Welcome(){
                   <p className="card-text">{car.description}</p>
                   <p className="card-text">{car.price}</p>
                   <a href="#" className="button">Get This</a>
+
                 </div>
               </div>
             ))}
