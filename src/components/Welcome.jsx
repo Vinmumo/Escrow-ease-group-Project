@@ -16,8 +16,8 @@ export default function Welcome(){
                     <button onClick={getBMW}>BMW</button>
                     <button>TOYOTA</button>
                     <button>NISSAN</button>
-                    <button>KIA</button>
-                    <button>HONDA</button>
+                    <button>AUDI</button>
+                    <button>MERCEDES</button>
                 </div>
        </div>
     )
