@@ -1,5 +1,8 @@
 import logo from '../images/logo.png';
 export default function Navbar() {
+
+    
+
     return(
         <div className="navbar">
 
@@ -11,7 +14,7 @@ export default function Navbar() {
                         <input
                         className='search' 
                         type="text"
-                        placeholder="find car"
+                        placeholder="find a car"
                         />
                     </div>           
 
