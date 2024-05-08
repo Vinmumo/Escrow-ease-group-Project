@@ -3,6 +3,12 @@ import { useEffect, useState } from 'react';
 
 
 export default function Welcome(){
+     
+
+
+
+
+
 
     const [cars, setCars] = useState([]);
   const [selectedCar, setSelectedCar] = useState(null);
@@ -39,6 +45,7 @@ export default function Welcome(){
         <div>
           <img className='welcome' src={welcome} alt="" />
         </div>
+        <h1 className='note'>Please note that these are not our vehicles,This is simply an inventory of our Partnered Dealerships</h1>
         <div className='btns'>
           <button onClick={() => handleButtonClick('BMW')}>BMW</button>
           <button onClick={() => handleButtonClick('Toyota')}>TOYOTA</button>
