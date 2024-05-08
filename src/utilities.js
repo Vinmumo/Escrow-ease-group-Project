@@ -5,7 +5,7 @@ export function getAudi(){
             "Content-Type": "application/json"
         }
     })
-    .then(response  => response.json)
+    .then(response  => response.json())
 }
 
 export function getNisaan(){
@@ -15,7 +15,7 @@ export function getNisaan(){
             "Content-Type": "application/json"
         }
     })
-    .then(response  => response.json)
+    .then(response  => response.json())
 }
 
 export function getToyota(){
@@ -25,7 +25,7 @@ export function getToyota(){
             "Content-Type": "application/json"
         }
     })
-    .then(response  => response.json)
+    .then(response  => response.json())
 }
 
 export function getMercedes(){
@@ -35,7 +35,7 @@ export function getMercedes(){
             "Content-Type": "application/json"
         }
     })
-    .then(response  => response.json)
+    .then(response  => response.json())
 }
 
 export function getBMW(){
@@ -45,7 +45,7 @@ export function getBMW(){
             "Content-Type": "application/json"
         }
     })
-    .then(response  => response.json)
+    .then(response  => response.json())
 }
 
 export function getCustomers(){
@@ -55,7 +55,7 @@ export function getCustomers(){
             "Content-Type": "application/json"
         }
     })
-    .then(response  => response.json)
+    .then(response  => response.json())
 }
 
 export function postCustomers(customer){
@@ -66,5 +66,5 @@ export function postCustomers(customer){
         },
         body: JSON.stringify(customer)
     })
-    .then(response  => response.json)
+    .then(response  => response.json())
 }
