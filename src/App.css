@@ -289,12 +289,12 @@ body{
   height: 10vh;
   /* pointer-events: none; */
   position: absolute;
-  top: 18%;
+  top: 16%;
   left: 1px;
 }
 .searchbar{
   position: absolute;
-  top: 25%;
+  top: 23%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
