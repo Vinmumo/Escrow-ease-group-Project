@@ -1,24 +1,70 @@
 import welcome from '../images/welcome.png';
-import { getAudi } from '../utilities';
-import { getBMW } from '../utilities';
-import { getMercedes } from '../utilities';
-import { getNisaan } from '../utilities';
-import { getToyota } from '../utilities';
+import { useEffect, useState } from 'react';
 
 
 export default function Welcome(){
-    return(
-       <div className='welcome-container'>
-                <div>
-                <img className='welcome' src={welcome} alt="" />
+
+    const [cars, setCars] = useState([]);
+  const [selectedCar, setSelectedCar] = useState(null);
+
+  useEffect(() => {
+    fetchData('BMW');
+  }, []);
+
+  const fetchData = (carType) => {
+    fetch(`https://projectdb-885a.onrender.com/${carType}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => response.json())
+    .then(data => setCars(data))
+    .catch(error => console.error('Error fetching data:', error));
+  }
+
+  const handleButtonClick = (carType) => {
+    if (selectedCar === carType) {
+      setSelectedCar(null);
+      setCars([]); 
+    } else {
+      setSelectedCar(carType);
+      fetchData(carType);
+    }
+  };
+
+  return (
+    <> 
+      <div className='welcome-container'>
+        <div>
+          <img className='welcome' src={welcome} alt="" />
+        </div>
+        <div className='btns'>
+          <button onClick={() => handleButtonClick('BMW')}>BMW</button>
+          <button onClick={() => handleButtonClick('Toyota')}>TOYOTA</button>
+          <button onClick={() => handleButtonClick('Nissan')}>NISSAN</button>
+          <button onClick={() => handleButtonClick('Audi')}>AUDI</button>
+          <button onClick={() => handleButtonClick('Mercedes')}>MERCEDES</button>
+        </div>
+      </div>
+      <div className="grid-container ">
+        {selectedCar && (
+          <div className="grid">
+            {cars.map(car => (
+              <div className="card" key={car.id}>
+                <img src={car.pic} className="card-img-top" alt={car.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{car.name}</h5>
+                  <p className="card-text">{car.description}</p>
+                  <p className="card-text">{car.price}</p>
+                  <a href="#" className="button">Get This</a>
+
                 </div>
-                <div className='btns'>
-                    <button onClick={getBMW}>BMW</button>
-                    <button>TOYOTA</button>
-                    <button>NISSAN</button>
-                    <button>AUDI</button>
-                    <button>MERCEDES</button>
-                </div>
-       </div>
-    )
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
+  )
 }
