@@ -1,11 +1,10 @@
-// import app from './App';
+
 import About from "./components/About";
 import App from "./App";
 import List from "./components/List";
 import ContactUs from "./components/ContactUs";
-// import BotData from "./botData";
+import Form from "./components/Form";
 
-// import Transaction from "./components/Transaction";
 
 
 
@@ -26,6 +25,9 @@ const routes = [
       },{
         path: "/contact",
         element: <ContactUs/>
+      },{
+        path: "/form",
+        element: <Form/>
       }
     ]
 
