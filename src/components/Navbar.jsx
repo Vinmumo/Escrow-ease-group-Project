@@ -1,7 +1,7 @@
 import logo from '../images/logo.png';
+import { NavLink } from 'react-router-dom';
 export default function Navbar() {
 
-    
 
     return(
         <div className="navbar">
@@ -10,19 +10,22 @@ export default function Navbar() {
                         <img className='logo' src={logo} alt="logo" />
                     </div>
 
-                    <div className="searchbar">
-                        <input
-                        className='search' 
-                        type="text"
-                        placeholder="find a car"
-                        />
-                    </div>           
 
                     <div className="menu">
-                        <ul>
-                            <li><a href='#'>Home</a></li>
-                            <li><a href='#'>About</a></li>
-                            <li><a href='#'>Contact</a></li>
+                        <ul> 
+                        <NavLink className="btn" to={`/list`}>
+                        FIND A CAR
+                    </NavLink>
+                        <NavLink className="btn" to={`/`}>
+                        HOME
+                    </NavLink>
+                            <NavLink className="btn" to={`/about`}>
+                        ABOUT
+                    </NavLink>
+                   
+                    <NavLink className="btn" to={`/contact`}>
+                        CONTACT US
+                    </NavLink>
                         </ul>
                     </div>
        </div>
