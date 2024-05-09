@@ -26,6 +26,7 @@ export default function Navbar() {
                     <NavLink className="btn" to={`/contact`}>
                         CONTACT US
                     </NavLink>
+                    
                         </ul>
                     </div>
        </div>

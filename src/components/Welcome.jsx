@@ -1,6 +1,6 @@
 import welcome from '../images/welcome.png';
 import { useEffect, useState } from 'react';
-
+import { NavLink } from 'react-router-dom';
 
 export default function Welcome(){
      
@@ -64,7 +64,10 @@ export default function Welcome(){
                   <h5 className="card-title">{car.name}</h5>
                   <p className="card-text">{car.description}</p>
                   <p className="card-text">{car.price}</p>
-                  <a href="#" className="button">Get This</a>
+                 
+                  <NavLink className="button" to={`/form`}>
+                        GET THIS
+                    </NavLink>
 
                 </div>
               </div>
