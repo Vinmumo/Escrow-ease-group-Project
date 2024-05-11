@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 export default function Navbar() {
@@ -66,7 +67,9 @@ export default function Navbar() {
                   <h5 className="card-title">{car.name}</h5>
                   <p className="card-text">{car.description}</p>
                   <p className="card-text">{car.price}</p>
-                  <a href="#" className="button">Get This</a>
+                  <NavLink className="button" to={`/form/${car.id}`}>
+                        GET THIS
+                    </NavLink>
 
                 </div>
               </div>
