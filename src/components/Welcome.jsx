@@ -42,6 +42,7 @@ export default function Welcome(){
   return (
     <> 
       <div className='welcome-container'>
+
         <div>
           <img className='welcome' src={welcome} alt="" />
         </div>
@@ -69,11 +70,12 @@ export default function Welcome(){
                         GET THIS
                     </NavLink>
 
+
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
+              )}
       </div>
     </>
   )
