@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="navbar">
 
                     <div className="logo">
-                        <img className='logo' src={logo} alt="logo" />
+                        <img className='logo2' src={logo} alt="logo" />
                     </div>
 
 

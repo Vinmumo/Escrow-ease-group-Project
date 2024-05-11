@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import Header from './Header';
 
 
 export default function Navbar() {
@@ -24,7 +25,7 @@ export default function Navbar() {
         );
 
         const data = await Promise.all(responses.map(response => response.json()));
-        const allCars = data.flat(); // Combining data from all endpoints into a single array
+        const allCars = data.flat(); 
         setCars(allCars);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -47,6 +48,10 @@ export default function Navbar() {
 
   return (
     <>
+    <Header />
+     <NavLink className="goback3" to={`/`}>
+                        Go Back
+                    </NavLink>
       <div className="searchbar2">
         <input
           className='search'
@@ -75,6 +80,7 @@ export default function Navbar() {
               </div>
             ))}
             </div>
+           
     </>
   );
 }

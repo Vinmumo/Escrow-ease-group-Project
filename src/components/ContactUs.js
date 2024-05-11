@@ -1,6 +1,6 @@
 import Header from './Header';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 
 export default function ContactUs(){
    
@@ -104,15 +104,11 @@ export default function ContactUs(){
                 </div>
                 <button type="submit">Submit</button>
             </form>
-    {/* <form >
-      <input placeholder="Name" type="text" required />
-      <input placeholder="Email" type="email" required />
-      <input placeholder="Subject" type="text" required />
-      <input placeholder="Message" className="message"/>
-      <button className="formBtn" type="submit">Submit</button>
-    </form> */}
   </div>
         </div>
+        <NavLink className="goback2" to={`/`}>
+                        Go Back
+                    </NavLink>
     </>
    )
 }

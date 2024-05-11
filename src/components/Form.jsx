@@ -32,7 +32,6 @@ function PaymentForm() {
                         return;
                     }
                 }
-                // If car with given ID is not found in any endpoint
                 setCar(null);
                 setIsLoading(false);
             } catch (error) {

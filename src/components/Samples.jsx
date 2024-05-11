@@ -1,8 +1,9 @@
 import car1 from '../images/BMW (1).jpg';
 import car2 from '../images/BMW X6 M Competition 2024.jpg';
 import car3 from '../images/BMW.jpg';
-export default function(){
+export default function Samples(){
     return(
+
         <div className='sample-container'>
 
             <div>
