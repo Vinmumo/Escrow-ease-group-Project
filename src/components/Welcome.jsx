@@ -45,7 +45,7 @@ export default function Welcome(){
         <div>
           <img className='welcome' src={welcome} alt="" />
         </div>
-        <h1 className='note'>Please note that these are not our vehicles,This is simply an inventory of our Partnered Dealerships</h1>
+       
         <div className='btns'>
           <button onClick={() => handleButtonClick('BMW')}>BMW</button>
           <button onClick={() => handleButtonClick('Toyota')}>TOYOTA</button>
@@ -65,7 +65,7 @@ export default function Welcome(){
                   <p className="card-text">{car.description}</p>
                   <p className="card-text">{car.price}</p>
                  
-                  <NavLink className="button" to={`/form`}>
+                  <NavLink className="button" to={`/form/${car.id}`}>
                         GET THIS
                     </NavLink>
 

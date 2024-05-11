@@ -26,7 +26,7 @@ const routes = [
         path: "/contact",
         element: <ContactUs/>
       },{
-        path: "/form",
+        path: "/form/:id",
         element: <Form/>
       }
     ]
