@@ -490,12 +490,6 @@ height: 10vh;
   top: 5vh;
 }
 
-#contact:hover {
-  background: #000000;
-}
-#contact:active {
-  background: #444;
-}
 
 #contactForm {
   /* display: none; */
